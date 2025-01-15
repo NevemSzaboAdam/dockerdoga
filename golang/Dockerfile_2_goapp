@@ -1,0 +1,16 @@
+# Alap image egy GO környezethez
+
+FROM golang:1.23.3-bookworm AS build
+
+COPY main.go /golangwebapp/
+COPY go.mod /golangwebapp/
+COPY go.sum /golangwebapp/
+
+
+WORKDIR /golangwebapp
+
+RUN go build
+
+EXPOSE 8000
+
+CMD ["./goapp"]

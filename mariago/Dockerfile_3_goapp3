@@ -1,0 +1,9 @@
+# Alap image egy GO környezethez
+
+FROM golang:1.23.3-bookworm
+
+COPY golangwebapp2 /golangwebapp
+WORKDIR /golangwebapp
+
+
+CMD ["./webappdemo2"]
